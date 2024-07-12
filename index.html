@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+  <title>Tab baru</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://telegra.ph/file/93d829f423d86689749c7.gif");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #logo {
+      width: 270px;
+      height: 100px;
+      margin: 20px auto;
+      display: block;
+    }
+    #search-bar {
+      max-width: 500px;
+      margin: 40px auto;
+      text-align: center;
+      background-color: rgba(79,79,79,0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    #search-input {
+      width: 70%;
+      height: 30px;
+      font-family: "Ga Maamli", sans-serif;
+      background-image: url("https://telegra.ph/file/93d829f423d86689749c7.gif");
+      border-radius: 20px;
+      color: red;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ff1414;
+    }
+    #search-button {
+      height: 30px;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      font-family: "Fjalla One", sans-serif;
+      border-radius: 5px;
+      background-color: #b1b1b1; /* silver color */
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s;
+    }
+    #search-button:hover {
+      background-color: #a1a1a1; /* darker silver color on hover */
+    }
+    #search-button:active {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      transform: translateY(2px);
+    }
+    /* Responsive design */
+    @media only screen and (max-width: 768px) {
+      #search-bar {
+        width: 90%;
+      }
+      #search-input {
+        width: 80%;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      #search-bar {
+        width: 95%;
+      }
+      #search-input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="https://telegra.ph/file/23a5f342df42cb9c298fc.png" alt="Logo">
+  <div id="search-bar">
+    <input id="search-input" type="text" name="q" placeholder="Search">
+    <button id="search-button">Search</button>
+  </div>
+
+  <script>
+    document.getElementById('search-button').addEventListener('click', function() {
+      var searchQuery = document.getElementById('search-input').value.trim();
+      if (searchQuery === '') {
+        alert('Please enter a search query!');
+        return;
+      }
+      window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(searchQuery);
+    });
+  </script>
+</body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+  </style>
